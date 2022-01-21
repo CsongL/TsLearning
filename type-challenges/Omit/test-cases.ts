@@ -12,7 +12,7 @@ interface Todo {
     completed: boolean
 }
 
-interface Expected1 {
+interface Expected1 {    
     title: string,
     completed: boolean
 }
