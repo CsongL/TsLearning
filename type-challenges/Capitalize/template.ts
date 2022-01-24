@@ -1,0 +1,1 @@
+type MyCapitalize<S extends string> = S extends `${infer First}${infer Other}` ? `${Uppercase<First>}${Other}` : ''
