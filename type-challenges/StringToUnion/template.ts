@@ -1,0 +1,1 @@
+type StringToUnion<T extends string, U = never> = T extends `${infer R}${infer L}` ? StringToUnion<L, U | R> : U   
