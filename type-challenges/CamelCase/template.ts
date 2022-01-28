@@ -1,0 +1,1 @@
+type CamelCase<S> = S extends `${infer T}` ? T extends `${infer F}-${infer L}` ? L extends Capitalize<L> ? `${F}-${CamelCase<L>}` : `${F}${CamelCase<Capitalize<L>>}` : T : ''
