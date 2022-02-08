@@ -1,0 +1,1 @@
+type DropChar<S, C> = S extends `${infer F}${infer L}` ? F extends C ? DropChar<L, C> : `${F}${DropChar<L, C>}`: S
