@@ -1,0 +1,1 @@
+type TupleToNestedObject<T extends unknown[], U> = T extends [infer F, ...infer L] ? {[K in F & string] : TupleToNestedObject<L, U>} : U
