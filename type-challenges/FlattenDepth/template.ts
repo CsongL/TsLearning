@@ -1,0 +1,1 @@
+type FlattenDepth<T extends any[], Depth extends number = 1, C extends any[] = []> = C['length'] extends Depth ? T : T extends [infer F, ...infer L] ? ( [ ...(F extends any[] ? FlattenDepth<F, Depth, [...C, any]> : [F]), ...FlattenDepth<L, Depth, C>]) : T
