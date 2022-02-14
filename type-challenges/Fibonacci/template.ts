@@ -1,0 +1,1 @@
+type Fibonacci<T extends number, N1 extends number[] = [0], N2 extends number[] = [0], C extends number[] = [0, 0, 0]> = T extends 1 | 2 ? 1 : C['length'] extends T ? [...N1, ...N2]['length'] : Fibonacci<T, N2, [...N1, ...N2], [...C, 0]>
