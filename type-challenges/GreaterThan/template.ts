@@ -1,0 +1,1 @@
+type GreaterThan<T extends number, U extends number, N1 extends number[] = [], N2 extends number[] = []> = N1['length'] extends T ? false: N2['length'] extends U ? true : GreaterThan<T, U, [...N1, 0], [...N2, 0]>;
