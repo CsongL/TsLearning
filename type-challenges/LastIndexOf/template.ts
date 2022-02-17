@@ -1,0 +1,1 @@
+type LastIndexOf<T extends unknown[], U extends number> = T extends [...infer L, infer R] ? R extends U ?L['length'] : LastIndexOf<L, U> : -1
