@@ -1,0 +1,1 @@
+type IndexOf<T extends unknown[], U extends number, R extends number[] = []> = T extends [infer F, ...infer L] ? F extends U ? R['length'] : IndexOf<L, U, [...R, 0]> : -1
