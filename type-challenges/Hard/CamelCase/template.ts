@@ -1,0 +1,1 @@
+type CamelCaseH<S extends string> = S extends `${infer F}_${infer M}${infer L}` ? `${Lowercase<F>}${Capitalize<M>}${CamelCaseH<L>}` : Lowercase<S>
