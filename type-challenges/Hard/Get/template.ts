@@ -1,0 +1,1 @@
+type Get<T, K extends string> = K extends `${infer F}.${infer L}` ? F extends keyof T ? Get<T[F], L> : never : K extends keyof T ? T[K] : never  
