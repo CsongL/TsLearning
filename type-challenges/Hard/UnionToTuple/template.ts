@@ -1,0 +1,1 @@
+type Omit<T, K> = T extends T ? T extends K ? never : T : never
