@@ -1,0 +1,1 @@
+// 通过函数参数的形式将Union类型的type转变为 Insection类型
