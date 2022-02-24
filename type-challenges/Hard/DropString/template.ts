@@ -1,0 +1,1 @@
+type DropString<S, R extends string> = S extends `${infer F}${infer L}` ? F extends StringToUnion<R> ? `${DropString<L, R>}` : `${F}${DropString<L, R>}` : S 
