@@ -1,0 +1,1 @@
+type BinaryToDecimal<S extends string, R extends any[] = []> = S extends `${infer F}${infer L}` ? F extends '0' ? BinaryToDecimal<L, [...R, ...R,]> : BinaryToDecimal<L, [...R, ...R, 1]> : R['length']
